@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Relaxer</title>
+    <style>
+      :root {
+        --ball: 10s;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+
+      .breathe-in {
+        animation: breathein 5s;
+      }
+
+      @keyframes breathein {
+        from {
+          background-color: rgb(33, 252, 33);
+        }
+        to {
+          background-color: rgb(33, 252, 33);
+        }
+      }
+
+      .hold {
+        animation: hold 15s;
+      }
+
+      @keyframes hold {
+        from {
+          background-color: rgb(253, 68, 68);
+        }
+        to {
+          background-color: rgb(253, 68, 68);
+        }
+      }
+
+      .breathe-out {
+        animation: breatheout 15s;
+      }
+
+      @keyframes breatheout {
+        from {
+          background-color: rgb(49, 49, 250);
+        }
+        to {
+          background-color: rgb(49, 49, 250);
+        }
+      }
+
+      button {
+        padding: 0.5em 1.4em;
+        display: block;
+        margin: 0 auto;
+        /* margin-top: 1rem; */
+        cursor: pointer;
+        background-color: rgb(57, 57, 243);
+        color: whitesmoke;
+        border: none;
+        outline: none;
+        font-size: 1.3rem;
+        transition: all 0.3s;
+      }
+
+      button:hover {
+        background-color: rgb(16, 16, 248);
+      }
+
+      button:active {
+        transform: scale(0.9);
+      }
+
+      p {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .ball {
+        position: fixed;
+        top: 0;
+        right: 1rem;
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: rgba(32, 30, 30, 0.75);
+        animation-timing-function: linear;
+      }
+
+      .ball-b-in {
+        animation-name: ball-b-in;
+        animation-duration: 5s;
+      }
+
+      .ball-hold {
+        animation-name: ball-hold;
+        animation-duration: 15s;
+      }
+
+      .ball-b-out {
+        animation-name: ball-b-out;
+        animation-duration: 15s;
+      }
+
+      @keyframes ball-b-in {
+        to {
+          top: 100%;
+          transform: translateY(-100%);
+        }
+      }
+
+      @keyframes ball-hold {
+        to {
+          top: 100%;
+          transform: translateY(-100%);
+        }
+      }
+
+      @keyframes ball-b-out {
+        to {
+          top: 100%;
+          transform: translateY(-100%);
+        }
+      }
+
+      #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+      }
+
+      p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="background"></div>
+    <button id="button">Breathe</button>
+    <span class="ball"></span>
+    <p id="repetition"></p>
+    <script src="script.js"></script>
+  </body>
+</html>

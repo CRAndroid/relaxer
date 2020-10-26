@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "dev": "tsc script.ts --watch"
+    "dev": "tsc script.ts --watch --outDir public"
   },
   "keywords": [],
   "author": "",

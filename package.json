@@ -4,7 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "dev": "tsc script.ts --watch --outDir public"
+    "dev": "tsc script.ts --watch --outDir public",
+    "deploy": "firebase deploy"
   },
   "keywords": [],
   "author": "",
